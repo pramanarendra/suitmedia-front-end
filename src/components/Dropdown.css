@@ -1,0 +1,33 @@
+.dropdown {
+    background-color: white;
+    position: absolute;
+    top: 56px;
+    left: 0;
+    width: 224px;
+}
+
+.dropdown-item {
+    text-transform: uppercase;
+    padding: 16px;
+    text-align: start;
+    list-style-type: none;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #434343;
+    color: white;
+}
+
+@media screen and (max-width: 960px) {
+    .dropdown {
+        width: 100%;
+        margin-top: 16px;
+        background-color: #F4F4F4;
+        position: inherit;
+    }
+
+    .dropdown-item {
+        text-align: center;
+    }
+}
