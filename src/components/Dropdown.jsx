@@ -1,4 +1,3 @@
-import { useState } from "react"
 import '../components/Dropdown.css'
 
 const Dropdown = () => {
@@ -8,7 +7,7 @@ const Dropdown = () => {
   return (
     <>
       <ul className="dropdown">
-        { dropdownItems.map((item, index) => {
+        {dropdownItems.map((item, index) => {
           return (
             <li key={index} className='dropdown-item'>{item}</li>
           )

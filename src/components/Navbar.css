@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
+    z-index: 1;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -66,5 +67,6 @@
         top: 0;
         left: 0;
         width: auto;
+        box-shadow: none;
     }
 }
