@@ -5,9 +5,10 @@ import CarouselToggle from './CarouselToggle'
 import './Carousel.css'
 import Banner1 from '../assets/bg.jpg'
 import Banner2 from '../assets/about-bg.jpg'
+import CarouselIndicator from './CarouselIndicator'
 
 const Carousel = () => {
-    // isi data carousel
+    // data carousel bisa ditambah di objek berikut
     const banners = [
         {
             img: Banner1,
@@ -19,27 +20,32 @@ const Carousel = () => {
         }
     ]
 
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentBanner, setcurrentBanner] = useState(0)
 
     const prev = () => {
-        const index = currentSlide > 0 ? currentSlide - 1 : banners.length - 1;
-        setCurrentSlide(index);
+        const index = currentBanner > 0 ? currentBanner - 1 : banners.length - 1;
+        setcurrentBanner(index);
     }
 
     const next = () => {
-        const index = currentSlide < banners.length - 1 ? currentSlide + 1 : 0;
-        setCurrentSlide(index);
+        const index = currentBanner < banners.length - 1 ? currentBanner + 1 : 0;
+        setcurrentBanner(index);
+    }
+
+    const switchIndex = (index) => {
+        setcurrentBanner(index)
     }
 
     return (
         <div className="carousel-container">
-            <div className="carousel" style={{ transform: `translateX(${-currentSlide * 100}%)` }}>
+            <div className="carousel" style={{ transform: `translateX(${-currentBanner * 100}%)` }}>
                 {banners.map((banner, index) => {
                     return (
                         <CarouselItem key={index} img={banner.img} desc={banner.desc} />
                     )
                 })}
             </div>
+            <CarouselIndicator banners={banners} currentIndex={currentBanner} switchIndex={switchIndex} />
             <CarouselToggle prev={prev} next={next} />
         </div>
     )

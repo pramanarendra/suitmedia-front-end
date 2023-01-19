@@ -1,0 +1,33 @@
+.form-container {
+    /* background-color: red; */
+    padding: 24px 0;
+}
+
+form {
+    background-color: rgb(206, 206, 206);
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+button,
+fieldset,
+input,
+legend,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
