@@ -83,6 +83,10 @@
         align-items: center;
     }
 
+    .card {
+        width: 320px;
+    }
+
     .card:nth-child(1)::after,
     .card:nth-child(2)::after {
         border-left: 18px solid transparent;

@@ -11,8 +11,8 @@ function App() {
       <Navbar />
       <Carousel />
       <Values />
-      {/* <Form />
-      <Footer /> */}
+      <Form />
+      <Footer />
     </div>
   );
 }
