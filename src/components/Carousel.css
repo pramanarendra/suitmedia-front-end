@@ -73,7 +73,6 @@
 @media screen and (max-width: 960px) {
     .carousel-container {
         width: 100%;
-        background-color: red;
         height: 720px;
     }
 
