@@ -5,6 +5,7 @@ const CarouselIndicator = ({ banners, currentIndex, switchIndex }) => {
         <div className="carousel-indicators">
             {banners.map((_, index) => (
                 <button
+                    key={index}
                     className={`carousel-indicator-item${currentIndex === index ? ' active' : ''}`}
                     onClick={() => switchIndex(index)}
                 ></button>

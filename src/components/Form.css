@@ -4,7 +4,6 @@
 }
 
 form {
-    background-color: rgb(206, 206, 206);
     width: 700px;
     margin: 0 auto;
     display: flex;
@@ -16,18 +15,44 @@ form {
     text-align: center;
 }
 
-button,
-fieldset,
+label:not(:nth-child(2)) {
+    margin-top: 16px;
+}
+
 input,
-legend,
-select,
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background-color: transparent;
+    padding: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #5696C2;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #5696C2;
+    margin-top: 16px;
     border: none;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}
+
+input.invalid,
+textarea.invalid {
+    border: 2px solid red;
 }

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Carousel from './components/Carousel';
 import Values from './components/Values';
 import Form from './components/Form';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Carousel />
       <Values />
       <Form />
+      <Footer />
     </div>
   );
 }
