@@ -73,3 +73,31 @@
     font-size: 20px;
     margin-bottom: 24px;
 }
+
+@media screen and (max-width: 960px) {
+    .values-cards {
+        /* display: flex;
+        gap: 32px;
+        justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card:nth-child(1)::after,
+    .card:nth-child(2)::after {
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        right: calc(50% - 24px);
+        bottom: calc(-18px - 24px);
+        top: auto;
+    }
+
+    .card:nth-child(1)::after {
+        border-top: 24px solid #E35244;
+    }
+
+    .card:nth-child(2)::after {
+        border-top: 24px solid #547C59;
+    }
+
+}
